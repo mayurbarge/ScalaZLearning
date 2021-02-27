@@ -4,6 +4,7 @@ trait Plus1[A] {
 def plus1[A <: Plus1[A]](a1:A,a2:A) = a1.plus1(a2)
 case class Cat(food:String) extends Plus1[Cat] { self =>
   override def plus1(a: Cat) = Cat(self.food + " And " + a.food)
+  override def equals(that: Any) = super.equals(that)
 }
 plus1(Cat("Cheese"), Cat("Mice")).food
 

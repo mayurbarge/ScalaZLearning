@@ -13,7 +13,10 @@ libraryDependencies ++= Seq(
 //  "org.scalaz" %% "scalaz-effect" % scalazVersion,
   //"org.scalaz" %% "scalaz-typelevel" % scalazVersion,
   "org.scalaz" %% "scalaz-scalacheck-binding" % scalazVersion % "test"
+
 )
+libraryDependencies += "io.github.stanch" %% "reftree" % "1.4.0"
+//resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
 
 scalacOptions += "-feature"
 
